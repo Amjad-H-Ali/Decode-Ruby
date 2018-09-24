@@ -3,6 +3,10 @@ p "Decode!"
 # Function takes in string of digits and 
 # k representing current portion of string being evaluated
 def helper data, k
+	# Exit code: When "" return 1
+	if k == 0
+		return 1;
+	end	
 
 end	
 
