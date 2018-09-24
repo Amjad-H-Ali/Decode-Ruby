@@ -12,7 +12,10 @@ def helper data, k
 	s = data.length - k
 	if data[s] == '0'
 		return 0;
-	end	
+	end
+	
+	# Ex: result of "12345" equals "2345" + "345"
+	result = helper(data, k - 1)	
 
 end	
 
