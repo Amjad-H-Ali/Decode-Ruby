@@ -5,7 +5,13 @@ p "Decode!"
 def helper data, k
 	# Exit code: When "" return 1
 	if k == 0
-		return 1;
+		return 1;	
+	end
+
+	# When current first char is '0', no way to decode
+	s = data.length - k
+	if data[s] == '0'
+		return 0;
 	end	
 
 end	
