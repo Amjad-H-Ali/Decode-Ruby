@@ -14,8 +14,13 @@ def helper data, k
 		return 0;
 	end
 	
-	# Ex: result of "12345" equals "2345" + "345"
-	result = helper(data, k - 1)	
+	# Ex: result of "12345" equals "2345" + "345"(if two digit number less than or equal to 26)
+	result = helper(data, k - 1)
+
+	# If two digit number less than or equal to 26
+	if k >= 2 and (data.slice(s, s + 2)).to_i <= 26
+		result += helper(data, k - 2)
+	end		
 
 end	
 
